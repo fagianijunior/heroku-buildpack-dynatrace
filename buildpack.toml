@@ -1,0 +1,21 @@
+api = "0.5"
+
+[buildpack]
+id = "fagianijunior/dynatrace"
+version = "0.0.1"
+name = "Dynatrace Agent Buildpack"
+homepage = "https://github.com/fagianijunior/heroku-buildpack-dynatrace"
+description = "Install the dynatrace agent to your build."
+keywords = ["dynatrace"]
+
+[[buildpack.licenses]]
+type = "MIT"
+
+[[stacks]]
+id = "heroku-18"
+
+[[stacks]]
+id = "heroku-20"
+
+[[stacks]]
+id = "io.buildpacks.stacks.bionic"
