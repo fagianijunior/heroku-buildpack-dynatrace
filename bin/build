@@ -2,18 +2,18 @@
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
 set -e   # fail fast
-# set -x # enable debugging
+set -x # enable debugging
 
 # Configure directories
-LAYERS_DIR=$1
+BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 BP_DIR=`cd $(dirname $0); cd ..; pwd`
 
-BUILD_DIR=$LAYERS_DIR/dynatrace
+# BUILD_DIR=$LAYERS_DIR/dynatrace
 mkdir -p $BUILD_DIR
 
-echo -e '[types]\nlaunch = true' > "$LAYERS_DIR/dynatrace.toml"
+echo -e 'cache = true\nlaunch = true' > "$BUILD_DIR/dynatrace.toml"
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/dynatrace.sh"
 EXPORT_PATH=/dev/null
