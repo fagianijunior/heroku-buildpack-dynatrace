@@ -13,7 +13,7 @@ BP_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILD_DIR=$LAYERS_DIR/dynatrace
 mkdir -p $BUILD_DIR
 
-echo -e '[types]\nlaunch = true' > "$LAYERS_DIR/dynatrace.toml"
+echo -e 'cache = true\nlaunch = true' > "$LAYERS_DIR/dynatrace.toml"
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/dynatrace.sh"
 EXPORT_PATH=/dev/null
